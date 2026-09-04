@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-03T22:00:11-03:00",
+  "actualizado": "2026-09-03T22:17:50-03:00",
   "indicadores": {
     "dolar_oficial": {
       "nombre": "Dólar oficial (minorista, promedio vendedor — BCRA)",
@@ -11,7 +11,7 @@
       "variacion": null,
       "fuente": "BCRA",
       "url_fuente": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
-      "consultado": "2026-09-03T22:00:08-03:00",
+      "consultado": "2026-09-03T22:17:47-03:00",
       "frecuencia": "diaria",
       "requiere_revision": false,
       "descripcion_original": "Tipo de cambio minorista (promedio vendedor)"
@@ -26,7 +26,7 @@
       "variacion": null,
       "fuente": "Bluelytics",
       "url_fuente": "https://api.bluelytics.com.ar/v2/latest",
-      "consultado": "2026-09-03T22:00:10-03:00",
+      "consultado": "2026-09-03T22:17:49-03:00",
       "frecuencia": "diaria",
       "requiere_revision": false,
       "compra": 1512,
@@ -42,7 +42,7 @@
       "variacion": null,
       "fuente": "Calculado a partir de BCRA (oficial) y Bluelytics (blue)",
       "url_fuente": "",
-      "consultado": "2026-09-03T22:00:11-03:00",
+      "consultado": "2026-09-03T22:17:49-03:00",
       "frecuencia": "diaria",
       "requiere_revision": false,
       "valor_dolar_oficial_usado": 1529.42,
@@ -58,7 +58,7 @@
       "variacion": null,
       "fuente": "INDEC (vía datos.gob.ar, Subsecretaría de Programación Macroeconómica)",
       "url_fuente": "https://apis.datos.gob.ar/series/api/series/?ids=148.3_INIVELNAL_DICI_M_26",
-      "consultado": "2026-09-03T22:00:11-03:00",
+      "consultado": "2026-09-03T22:17:49-03:00",
       "frecuencia": "mensual",
       "requiere_revision": false,
       "tipo": "mensual",
@@ -76,7 +76,7 @@
       "variacion": null,
       "fuente": "BCRA",
       "url_fuente": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
-      "consultado": "2026-09-03T22:00:11-03:00",
+      "consultado": "2026-09-03T22:17:50-03:00",
       "frecuencia": "diaria / según disponibilidad",
       "requiere_revision": false,
       "descripcion_original": "Tasa de interés BADLAR de bancos privados",
@@ -92,7 +92,7 @@
       "variacion": null,
       "fuente": "",
       "url_fuente": "",
-      "consultado": "2026-09-03T22:00:11-03:00",
+      "consultado": "2026-09-03T22:17:50-03:00",
       "frecuencia": "según publicación oficial",
       "requiere_revision": false,
       "nota": "BCRA no publica una API pública con la serie agregada de cheques rechazados (su API de 'Cheques' es para consultar un cheque puntual, no un total por período). El dato oficial sale del Informe sobre Bancos en PDF — no se arma un scraper de PDF para esto sin confirmarlo antes."
@@ -107,7 +107,7 @@
       "variacion": null,
       "fuente": "",
       "url_fuente": "",
-      "consultado": "2026-09-03T22:00:11-03:00",
+      "consultado": "2026-09-03T22:17:50-03:00",
       "frecuencia": "mensual",
       "requiere_revision": false,
       "nota": "CAME no publica una API pública para su índice de ventas minoristas pyme; el reporte sale como PDF/nota de prensa. Si preferís usar la Encuesta de Supermercados de INDEC en su lugar, avisame explícitamente — no se cambia la fuente en silencio."
@@ -122,7 +122,7 @@
       "variacion": null,
       "fuente": "",
       "url_fuente": "",
-      "consultado": "2026-09-03T22:00:11-03:00",
+      "consultado": "2026-09-03T22:17:50-03:00",
       "frecuencia": "mensual",
       "requiere_revision": false,
       "nota": "El ICC de la Universidad Di Tella se publica como planilla/PDF, sin API pública confirmada."

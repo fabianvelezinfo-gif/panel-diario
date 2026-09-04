@@ -1,0 +1,76 @@
+{
+  "lo_ultimo": [
+    {
+      "titular": "Plazo fijo: los bancos pagan hasta 24% TNA en septiembre",
+      "url": "https://www.lanacion.com.ar/economia/plazo-fijo-cual-es-la-tasa-de-interes-banco-por-banco-este-jueves-3-de-septiembre-nid03092026/"
+    },
+    {
+      "titular": "INDEC difunde la inflación de agosto el jueves 10",
+      "url": "https://www.canal26.com/economia/2026/08/29/el-indec-difunde-la-inflacion-de-agosto-2026-que-dia-se-conoce-el-dato-y-que-numero-espera-el-gobierno/"
+    },
+    {
+      "titular": "Córdoba abre inscripción al Programa Lazos para mipymes hasta el 21/9",
+      "url": "https://cordobaproduce.cba.gov.ar/23069/cordoba-impulsa-el-crecimiento-de-sus-mipymes-con-una-nueva-edicion-del-programa-lazos/"
+    }
+  ],
+  "panorama": {
+    "kicker": "ACTIVIDAD",
+    "titulo": "El comercio pyme cordobés cae 5,9% y completa cinco agostos en rojo",
+    "bajada": "FEDECOM relevó 380 comercios de la capital y el interior provincial: las ventas de agosto bajaron 5,9% interanual, la quinta caída consecutiva para ese mes desde 2022. El consumo no repunta pese a que la inflación se desacelera, y ya es un patrón y no un bache puntual. Para una pyme cordobesa conviene planificar el capital de trabajo sobre un piso de ventas más bajo, en vez de comprar stock apostando a una recuperación que todavía no llegó.",
+    "link": "https://hoydia.com.ar/economia/por-que-cordoba-no-repunta-cinco-agostos-seguidos-de-consumo-en-baja/"
+  },
+  "lo_importante": [
+    {
+      "kicker": "FINANCIAMIENTO",
+      "titular": "El Estado amplía a toda pyme el subsidio tecnológico Kit 4.0",
+      "texto": "Por la Resolución 343/2026 el programa dejó de ser exclusivo para la industria y ahora cubre empresas de cualquier rubro. El subsidio llega al 50% del valor de paquetes de hardware y software, con un tope de $20 millones por proyecto. Piden dos años de antigüedad, certificado MiPyme y estar al día con AFIP.",
+      "pie": "3 SEP 2026 · 3 MIN LECTURA"
+    },
+    {
+      "kicker": "EMPRESAS",
+      "titular": "La industria perdió 31.174 empresas empleadoras desde 2023",
+      "texto": "Un informe de Industriales Pymes Argentinos con datos de la SRT contabiliza 4.120 fábricas menos desde diciembre de 2023 y 448.354 puestos registrados eliminados en el mismo período. La capacidad instalada opera al 59,1% y el 87% de los directivos no espera mejoras hasta octubre.",
+      "pie": "3 SEP 2026 · 3 MIN LECTURA"
+    },
+    {
+      "kicker": "PRECIOS",
+      "titular": "Luz y gas suben en septiembre, pero se frena el recorte de subsidios",
+      "texto": "Las facturas suben hasta 1,75% en electricidad y 1,4% en gas. El Gobierno moderó el recorte al consumo subsidiado: el tope bonificado, que iba a bajar a 150 kWh mensuales, quedó en 200 kWh. Para los usuarios alcanzados la bonificación eléctrica llega al 75% del total.",
+      "pie": "3 SEP 2026 · 2 MIN LECTURA"
+    }
+  ],
+  "analisis": {
+    "kicker": "GESTIÓN",
+    "titulo": "Menos empresas, menos clientes: la cadena que aprieta a las pymes",
+    "texto": "Los dos datos de esta edición son la misma historia contada dos veces: la industria tiene hoy 31.174 empleadores menos que en 2023, y el comercio cordobés encadena su quinto agosto seguido en baja. Cuando cierra un proveedor o un cliente industrial, se lleva con él la demanda de la ferretería, la distribuidora o el estudio contable que lo atendía. No es un problema de un sector aislado, es una cadena. La respuesta razonable no es esperar el repunte: es sostener liquidez, diversificar la cartera de clientes y revisar qué proveedores están en riesgo de dejar de comprar o de pagar.",
+    "autor": "Fabián Vélez",
+    "cargo": "Director editorial"
+  },
+  "ultimos_analisis": [
+    {
+      "hora": "22:10",
+      "etiqueta": "EMPRESAS",
+      "titular": "Por qué cerrar un cliente industrial duele más que una suba de tasas"
+    },
+    {
+      "hora": "20:35",
+      "etiqueta": "GESTIÓN",
+      "titular": "Capital de trabajo: cómo planificar con ventas que no repuntan"
+    },
+    {
+      "hora": "18:50",
+      "etiqueta": "DATOS",
+      "titular": "Qué mirar del IPC de agosto antes de que lo publique el INDEC"
+    }
+  ],
+  "fuentes": [
+    { "nombre": "Hoy Día Córdoba" },
+    { "nombre": "FEDECOM" },
+    { "nombre": "El Cronista" },
+    { "nombre": "Nota al Pie" },
+    { "nombre": "Página/12" },
+    { "nombre": "La Nación" },
+    { "nombre": "Canal 26" },
+    { "nombre": "Córdoba Produce" }
+  ]
+}
