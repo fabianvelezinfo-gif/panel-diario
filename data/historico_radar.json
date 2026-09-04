@@ -1,0 +1,57 @@
+[
+  {
+    "indicador": "dolar_oficial",
+    "nombre": "Dólar oficial (minorista, promedio vendedor — BCRA)",
+    "valor": 1529.42,
+    "unidad": "ARS",
+    "periodo": "2026-09-03",
+    "fecha_dato": "2026-09-03",
+    "fuente": "BCRA",
+    "url_fuente": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
+    "consultado": "2026-09-03T22:00:08-03:00"
+  },
+  {
+    "indicador": "dolar_blue",
+    "nombre": "Dólar blue (venta)",
+    "valor": 1545,
+    "unidad": "ARS",
+    "periodo": "2026-09-03",
+    "fecha_dato": "2026-09-03",
+    "fuente": "Bluelytics",
+    "url_fuente": "https://api.bluelytics.com.ar/v2/latest",
+    "consultado": "2026-09-03T22:00:10-03:00"
+  },
+  {
+    "indicador": "brecha",
+    "nombre": "Brecha cambiaria (blue vs. oficial)",
+    "valor": 1.02,
+    "unidad": "%",
+    "periodo": "2026-09-03",
+    "fecha_dato": "2026-09-03",
+    "fuente": "Calculado a partir de BCRA (oficial) y Bluelytics (blue)",
+    "url_fuente": "",
+    "consultado": "2026-09-03T22:00:11-03:00"
+  },
+  {
+    "indicador": "inflacion",
+    "nombre": "Inflación mensual (IPC nivel general)",
+    "valor": 2.11,
+    "unidad": "%",
+    "periodo": "2026-07",
+    "fecha_dato": "2026-07-01",
+    "fuente": "INDEC (vía datos.gob.ar, Subsecretaría de Programación Macroeconómica)",
+    "url_fuente": "https://apis.datos.gob.ar/series/api/series/?ids=148.3_INIVELNAL_DICI_M_26",
+    "consultado": "2026-09-03T22:00:11-03:00"
+  },
+  {
+    "indicador": "badlar",
+    "nombre": "Tasa BADLAR (bancos privados)",
+    "valor": 23.125,
+    "unidad": "% TNA",
+    "periodo": "2026-09-02",
+    "fecha_dato": "2026-09-02",
+    "fuente": "BCRA",
+    "url_fuente": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
+    "consultado": "2026-09-03T22:00:11-03:00"
+  }
+]
