@@ -1,76 +1,75 @@
 {
   "lo_ultimo": [
     {
-      "titular": "Plazo fijo: los bancos pagan hasta 24% TNA en septiembre",
-      "url": "https://www.lanacion.com.ar/economia/plazo-fijo-cual-es-la-tasa-de-interes-banco-por-banco-este-jueves-3-de-septiembre-nid03092026/"
+      "titular": "Inflación de agosto: las consultoras la ven entre 1,5% y 1,9%",
+      "url": "https://www.bloomberglinea.com/latinoamerica/argentina/en-cuanto-cerro-la-inflacion-de-agosto-segun-las-principales-consultoras-de-argentina/"
     },
     {
-      "titular": "INDEC difunde la inflación de agosto el jueves 10",
-      "url": "https://www.canal26.com/economia/2026/08/29/el-indec-difunde-la-inflacion-de-agosto-2026-que-dia-se-conoce-el-dato-y-que-numero-espera-el-gobierno/"
+      "titular": "Día de la Industria: la producción cae 2,2% en el semestre",
+      "url": "https://www.ambito.com/informacion-general/dia-la-industria-que-se-celebra-cada-2-septiembre-y-los-numeros-2026-que-preocupan-al-sector-n6317613"
     },
     {
-      "titular": "Córdoba abre inscripción al Programa Lazos para mipymes hasta el 21/9",
-      "url": "https://cordobaproduce.cba.gov.ar/23069/cordoba-impulsa-el-crecimiento-de-sus-mipymes-con-una-nueva-edicion-del-programa-lazos/"
+      "titular": "El Tesoro renovó el 96% de sus vencimientos de agosto",
+      "url": "https://www.baenegocios.com/economia/licitacion-el-tesoro-consiguio-renovar-el-96-y-dejara-sueltos-500-000-m/"
     }
   ],
   "panorama": {
-    "kicker": "ACTIVIDAD",
-    "titulo": "El comercio pyme cordobés cae 5,9% y completa cinco agostos en rojo",
-    "bajada": "FEDECOM relevó 380 comercios de la capital y el interior provincial: las ventas de agosto bajaron 5,9% interanual, la quinta caída consecutiva para ese mes desde 2022. El consumo no repunta pese a que la inflación se desacelera, y ya es un patrón y no un bache puntual. Para una pyme cordobesa conviene planificar el capital de trabajo sobre un piso de ventas más bajo, en vez de comprar stock apostando a una recuperación que todavía no llegó.",
-    "link": "https://hoydia.com.ar/economia/por-que-cordoba-no-repunta-cinco-agostos-seguidos-de-consumo-en-baja/"
+    "kicker": "IMPUESTOS",
+    "titulo": "Córdoba amplía Ingresos Brutos Cero a más pymes industriales",
+    "bajada": "El gobernador Llaryora elevó de $3.200 a $4.500 millones el techo de facturación para acceder a la exención de Ingresos Brutos, en el acto por el Día de la Industria. El beneficio pasa a alcanzar a una franja más ancha de pymes, aunque exige invertir en activos fijos al menos el 1,2% de la base imponible del año anterior y todavía necesita aprobación de la Legislatura provincial. Para una pyme que hoy factura cerca del límite anterior, conviene revisar si ahora entra en el régimen antes de cerrar el presupuesto fiscal 2027: es carga tributaria provincial que puede bajar a cero en vez de sumarse a costos fijos ya ajustados.",
+    "link": "https://hoydia.com.ar/hoy-cordoba/llaryora-ingresos-brutos-pymes-industria/"
   },
   "lo_importante": [
     {
+      "kicker": "GESTIÓN",
+      "titular": "UIA pidió parar embargos de ARCA a pymes; el Gobierno no aceptó",
+      "texto": "En el acto central por el Día de la Industria, la Unión Industrial Argentina pidió al Gobierno una tregua de 180 días sin embargos de ARCA contra pymes con deudas impositivas. El equipo económico rechazó el pedido. Para una empresa con cuentas atrasadas la señal es clara: no hay margen de espera oficial, y regularizar antes de un embargo sigue siendo la única salida segura para no perder acceso a las cuentas bancarias.",
+      "pie": "4 SEP 2026 · 2 MIN LECTURA"
+    },
+    {
+      "kicker": "ACTIVIDAD",
+      "titular": "Consumo masivo: caen los súper y ganan los comercios de barrio",
+      "texto": "La consultora Worldpanel midió que en el segundo trimestre el volumen comprado cayó 3,7% interanual, aunque la frecuencia de compra subió 1,1%: la gente va más veces y lleva menos por vez. Hipermercados, supermercados y mayoristas perdieron entre 12% y 13% de volumen, mientras los autoservicios de cercanía crecieron casi 8%. Para un comercio minorista, el dato práctico es que el ticket promedio bajó y conviene surtir con reposición más frecuente en vez de apostar a la compra grande.",
+      "pie": "4 SEP 2026 · 3 MIN LECTURA"
+    },
+    {
       "kicker": "FINANCIAMIENTO",
-      "titular": "El Estado amplía a toda pyme el subsidio tecnológico Kit 4.0",
-      "texto": "Por la Resolución 343/2026 el programa dejó de ser exclusivo para la industria y ahora cubre empresas de cualquier rubro. El subsidio llega al 50% del valor de paquetes de hardware y software, con un tope de $20 millones por proyecto. Piden dos años de antigüedad, certificado MiPyme y estar al día con AFIP.",
-      "pie": "3 SEP 2026 · 3 MIN LECTURA"
-    },
-    {
-      "kicker": "EMPRESAS",
-      "titular": "La industria perdió 31.174 empresas empleadoras desde 2023",
-      "texto": "Un informe de Industriales Pymes Argentinos con datos de la SRT contabiliza 4.120 fábricas menos desde diciembre de 2023 y 448.354 puestos registrados eliminados en el mismo período. La capacidad instalada opera al 59,1% y el 87% de los directivos no espera mejoras hasta octubre.",
-      "pie": "3 SEP 2026 · 3 MIN LECTURA"
-    },
-    {
-      "kicker": "PRECIOS",
-      "titular": "Luz y gas suben en septiembre, pero se frena el recorte de subsidios",
-      "texto": "Las facturas suben hasta 1,75% en electricidad y 1,4% en gas. El Gobierno moderó el recorte al consumo subsidiado: el tope bonificado, que iba a bajar a 150 kWh mensuales, quedó en 200 kWh. Para los usuarios alcanzados la bonificación eléctrica llega al 75% del total.",
-      "pie": "3 SEP 2026 · 2 MIN LECTURA"
+      "titular": "Las pymes duplicaron sus emisiones de deuda en el semestre",
+      "texto": "Según datos del mercado de capitales, las colocaciones de obligaciones negociables pyme pasaron de 26 a 52 entre el primer semestre de 2025 y el de 2026, y el monto en pesos subió 81% interanual hasta $68.800 millones. La Comisión Nacional de Valores además eliminó la autorización previa para la mayoría de las emisiones de deuda, lo que agiliza el trámite. Para una pyme con buen historial, emitir deuda en el mercado empieza a competir con el crédito bancario como fuente de capital de trabajo.",
+      "pie": "4 SEP 2026 · 3 MIN LECTURA"
     }
   ],
   "analisis": {
     "kicker": "GESTIÓN",
-    "titulo": "Menos empresas, menos clientes: la cadena que aprieta a las pymes",
-    "texto": "Los dos datos de esta edición son la misma historia contada dos veces: la industria tiene hoy 31.174 empleadores menos que en 2023, y el comercio cordobés encadena su quinto agosto seguido en baja. Cuando cierra un proveedor o un cliente industrial, se lleva con él la demanda de la ferretería, la distribuidora o el estudio contable que lo atendía. No es un problema de un sector aislado, es una cadena. La respuesta razonable no es esperar el repunte: es sostener liquidez, diversificar la cartera de clientes y revisar qué proveedores están en riesgo de dejar de comprar o de pagar.",
+    "titulo": "Menos Ingresos Brutos, más presión de ARCA: la pyme entre dos caras del Estado",
+    "texto": "Las dos noticias fiscales de esta edición muestran caras distintas del mismo Estado. Córdoba amplía el universo de pymes industriales que pueden llegar a pagar cero Ingresos Brutos, y a la vez la Nación le dice que no a la UIA cuando pide una tregua de embargos para empresas con deudas con ARCA. Ninguna de las dos decisiones es mala en sí misma —una provincia que baja impuestos y una Nación que no relaja el cobro son coherentes con bajar el déficit—, pero para una pyme cordobesa se traduce en una tarea doble: revisar si ahora entra en el régimen de exención provincial, y al mismo tiempo blindar la relación con ARCA antes de que una deuda impositiva se convierta en un embargo de cuenta. Sumale que el consumidor sigue comprando poco y seguido: con el ticket promedio más chico, el capital de trabajo rinde menos margen por operación. La lectura para septiembre es simple: ordenar la parte impositiva mientras se puede elegir, porque cuando el Estado decide por vos —con un embargo— ya no hay margen de maniobra.",
     "autor": "Fabián Vélez",
     "cargo": "Director editorial"
   },
   "ultimos_analisis": [
     {
-      "hora": "22:10",
-      "etiqueta": "EMPRESAS",
-      "titular": "Por qué cerrar un cliente industrial duele más que una suba de tasas"
+      "hora": "21:40",
+      "etiqueta": "IMPUESTOS",
+      "titular": "Cómo saber si tu pyme entra en el nuevo tope de Ingresos Brutos Cero"
     },
     {
-      "hora": "20:35",
+      "hora": "19:55",
       "etiqueta": "GESTIÓN",
-      "titular": "Capital de trabajo: cómo planificar con ventas que no repuntan"
+      "titular": "Qué hacer antes de que ARCA embargue una cuenta bancaria"
     },
     {
-      "hora": "18:50",
-      "etiqueta": "DATOS",
-      "titular": "Qué mirar del IPC de agosto antes de que lo publique el INDEC"
+      "hora": "18:20",
+      "etiqueta": "ACTIVIDAD",
+      "titular": "Por qué el súper pierde y el almacén de barrio gana clientes"
     }
   ],
   "fuentes": [
+    { "nombre": "Gobierno de Córdoba" },
     { "nombre": "Hoy Día Córdoba" },
-    { "nombre": "FEDECOM" },
-    { "nombre": "El Cronista" },
-    { "nombre": "Nota al Pie" },
-    { "nombre": "Página/12" },
+    { "nombre": "Ámbito" },
+    { "nombre": "Infoalimentación" },
     { "nombre": "La Nación" },
-    { "nombre": "Canal 26" },
-    { "nombre": "Córdoba Produce" }
+    { "nombre": "BAE Negocios" },
+    { "nombre": "Bloomberg Línea" }
   ]
 }

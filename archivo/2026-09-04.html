@@ -1,82 +1,447 @@
 <!doctype html>
+<html lang="es">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Panel diario</title>
+<title>UMBRAL — Finanzas, empresas, economía real</title>
+<meta name="description" content="Información para decidir. Finanzas, empresas y economía real.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<!--
+  ================================================================
+  PLANTILLA DE UMBRAL — no modificar el diseño ni el CSS.
+  El proceso automático solo reemplaza el contenido que está entre
+  los marcadores <!-- INICIO X --> y <!-- FIN X -->.
+
+  Marcadores disponibles:
+    FECHA-HORA        fecha y hora de actualización de la barra superior
+    LO-ULTIMO         titulares breves del ticker (3)
+    PANORAMA          kicker, título, bajada e imagen de la nota principal
+    RADAR             filas de indicadores
+    RADAR-META        línea de actualizado y fuentes del radar
+    LO-IMPORTANTE     tres tarjetas
+    ANALISIS          análisis destacado de la columna derecha
+    HERRAMIENTA       tarjeta oscura de herramienta del día
+    ULTIMOS-ANALISIS  lista inferior de notas cortas
+    PIE-FUENTES       fuentes utilizadas en la corrida
+  ================================================================
+-->
+
 <style>
-  :root { --tinta:#1C1F22; --suave:#6B7378; --linea:#E2E1DC; --papel:#FAF9F6;
-          --verde:#3F7D52; --amarillo:#B8860B; --rojo:#A33A31; }
-  * { box-sizing:border-box }
-  body { margin:0; background:var(--papel); color:var(--tinta);
-         font:16px/1.6 Georgia, 'Times New Roman', serif; }
-  .hoja { max-width:660px; margin:0 auto; padding:56px 22px 80px }
-  header { border-bottom:2px solid var(--tinta); padding-bottom:14px; margin-bottom:26px }
-  h1 { font-size:34px; margin:0 0 4px; letter-spacing:-.01em }
-  .fecha { color:var(--suave); font-size:14px; font-family:system-ui,sans-serif }
-  .resumen { font-size:19px; line-height:1.55; margin:0 0 40px }
-  article { padding:22px 0; border-top:1px solid var(--linea) }
-  h2 { font-size:21px; margin:0 0 8px; line-height:1.3 }
-  p { margin:0 0 10px }
-  .importa { font-size:15px; color:var(--suave); border-left:2px solid var(--linea); padding-left:12px }
-  .pie { font-family:system-ui,sans-serif; font-size:13px; color:var(--suave); margin:0 }
-  .senal { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:8px; vertical-align:middle }
-  .verde{background:var(--verde)} .amarillo{background:var(--amarillo)} .rojo{background:var(--rojo)}
-  a { color:inherit }
-  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--linea);
-           font-family:system-ui,sans-serif; font-size:13px; color:var(--suave) }
-  @media (prefers-color-scheme: dark) {
-    :root { --tinta:#E8E6E1; --suave:#9AA0A4; --linea:#2E3236; --papel:#16181A }
-  }
+:root{
+  --papel:#F4F4EF;
+  --blanco:#FFFFFF;
+  --tinta:#101B21;
+  --noche:#0C2630;
+  --menta:#2ECFB0;
+  --menta-txt:#0E8E77;
+  --gris:#6B7A80;
+  --gris-2:#8E9AA0;
+  --linea:#E1E1D9;
+  --sube:#C0392B;
+  --baja:#1E8E5A;
+  --ancho:1440px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--papel);color:var(--tinta);
+  font:15px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Source Serif 4",Georgia,serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--ancho);margin:0 auto;padding:0 32px}
+
+/* ---------- cabecera ---------- */
+.tope{padding:20px 0 0}
+.tope-fila{display:flex;align-items:center;gap:22px}
+.marca{font-weight:800;font-size:38px;letter-spacing:-.035em;line-height:1}
+.marca .punto{color:var(--menta)}
+.lema{border-left:1px solid var(--linea);padding-left:22px;line-height:1.35}
+.lema b{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em}
+.lema span{font-size:12.5px;color:var(--menta-txt)}
+.tope-fila .hueco{flex:1}
+.acc{display:flex;align-items:center;gap:24px}
+.acc a{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--tinta)}
+.acc svg{stroke:currentColor;fill:none;stroke-width:1.6}
+.suscri{background:var(--noche);color:#fff;padding:12px 22px;border-radius:3px;
+        font-size:12.5px;font-weight:700;letter-spacing:.08em}
+.suscri:hover{background:#123642}
+
+nav{margin-top:16px}
+nav ul{display:flex;gap:38px;list-style:none;margin:0;padding:0 0 12px}
+nav a{font-size:12.5px;font-weight:600;letter-spacing:.09em;color:var(--tinta);
+      padding-bottom:11px;display:inline-block}
+nav a:hover{color:var(--menta-txt)}
+nav .aqui{border-bottom:2px solid var(--menta)}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--noche);color:#DCE6E8;margin-top:0}
+.ticker .wrap{display:flex;align-items:center;gap:0;height:44px;overflow:hidden}
+.ticker .rot{color:var(--menta);font-size:11.5px;font-weight:700;letter-spacing:.11em;
+             display:flex;align-items:center;gap:9px;padding-right:26px;white-space:nowrap}
+.ticker .rot i{width:6px;height:6px;border-radius:50%;background:var(--menta);display:block}
+.ticker ul{display:flex;list-style:none;margin:0;padding:0;flex:1;min-width:0;overflow:hidden}
+.ticker li{padding:0 26px;border-left:1px solid #23424C;font-size:13.5px;
+           white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ticker li:hover{color:#fff}
+.ticker .reloj{padding-left:26px;font-size:12.5px;color:#A9BEC2;white-space:nowrap;letter-spacing:.03em}
+
+/* ---------- grilla ---------- */
+.grilla{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:26px;padding:26px 0 60px}
+.col-b{display:flex;flex-direction:column;gap:20px}
+
+/* ---------- panorama ---------- */
+.panorama{background:var(--blanco);border:1px solid var(--linea);border-radius:4px;
+          display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.panorama .texto{padding:34px 34px 30px}
+.kicker{font-size:11.5px;font-weight:700;letter-spacing:.12em;color:var(--menta-txt);margin:0 0 16px}
+.panorama h1{font-family:"Source Serif 4",Georgia,serif;font-weight:700;
+             font-size:41px;line-height:1.1;letter-spacing:-.015em;margin:0 0 18px}
+.panorama p{font-size:15px;line-height:1.65;color:#33454D;margin:0 0 26px;max-width:44ch}
+.boton{display:inline-flex;align-items:center;gap:11px;background:var(--noche);color:#fff;
+       padding:14px 24px;border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.09em}
+.boton:hover{background:#123642}
+.panorama .foto{background:var(--noche);min-height:300px;position:relative}
+.panorama .foto img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- secciones ---------- */
+.rotulo{display:flex;align-items:center;justify-content:space-between;margin:6px 0 14px}
+.rotulo h2{font-size:13px;font-weight:700;letter-spacing:.11em;margin:0;padding-bottom:7px;
+           border-bottom:2px solid var(--menta)}
+.rotulo a{font-size:11.5px;font-weight:700;letter-spacing:.09em;color:var(--menta-txt)}
+
+/* ---------- tres tarjetas ---------- */
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tarjeta{background:var(--blanco);border:1px solid var(--linea);border-radius:4px;
+         padding:20px;display:flex;flex-direction:column}
+.tarjeta h3{font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:700;
+            line-height:1.25;margin:0 0 10px}
+.tarjeta p{font-size:13.5px;line-height:1.6;color:#42545B;margin:0 0 16px}
+.tarjeta .cuerpo{display:flex;gap:14px;align-items:flex-start;flex:1}
+.tarjeta .mini{width:96px;height:76px;flex:none;border-radius:3px;background:#D8DEDD;
+               object-fit:cover;margin-top:2px}
+.tarjeta .pie{font-size:11.5px;color:var(--gris-2);letter-spacing:.03em;
+              border-top:1px solid var(--linea);padding-top:12px;margin-top:auto}
+
+/* ---------- últimos análisis ---------- */
+.lista{background:var(--blanco);border:1px solid var(--linea);border-radius:4px;
+       display:grid;grid-template-columns:repeat(3,1fr)}
+.lista .fila{padding:18px 20px;border-left:1px solid var(--linea);display:flex;gap:14px}
+.lista .fila:first-child{border-left:0}
+.lista .hora{font-size:12px;color:var(--gris-2);flex:none;padding-top:1px}
+.lista .cont{flex:1;min-width:0}
+.lista .et{font-size:10.5px;font-weight:700;letter-spacing:.11em;color:var(--menta-txt);
+           display:block;margin-bottom:5px}
+.lista h4{font-family:"Source Serif 4",Georgia,serif;font-size:15.5px;font-weight:600;
+          line-height:1.35;margin:0}
+.lista .marca-libro{flex:none;color:var(--gris-2)}
+
+/* ---------- radar ---------- */
+.radar{background:var(--blanco);border:1px solid var(--linea);border-radius:4px;padding:20px 22px 18px}
+.radar-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px}
+.radar-top h2{font-size:16px;font-weight:800;letter-spacing:.02em;margin:0}
+.radar-top h2 em{font-style:normal;color:var(--menta-txt)}
+.radar-top a{font-size:11.5px;color:var(--gris);letter-spacing:.02em}
+.radar ul{list-style:none;margin:0;padding:0}
+.ind{display:grid;grid-template-columns:22px 1fr auto auto;align-items:center;
+     gap:11px;padding:9px 0;border-top:1px solid #EFEFE9}
+.ind:first-child{border-top:0}
+.ind .ico{color:var(--gris);display:flex}
+.ind .ico svg{stroke:currentColor;fill:none;stroke-width:1.5}
+.ind .nom{font-size:11.5px;font-weight:700;letter-spacing:.07em}
+.ind .val{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;
+          text-align:right;padding-right:14px}
+.ind .var{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;
+          text-align:right;min-width:74px;display:flex;align-items:center;
+          justify-content:flex-end;gap:5px}
+/* Semántica: mal = rojo, bien = verde, neutro = gris. No depende de si subió o bajó. */
+.var.mal{color:var(--sube)} .var.bien{color:var(--baja)} .var.neutro{color:var(--gris)}
+.radar .meta{margin:14px 0 0;font-size:11.5px;line-height:1.6;color:var(--gris-2)}
+
+/* ---------- análisis destacado ---------- */
+.destacado{background:var(--blanco);border:1px solid var(--linea);border-radius:4px;padding:22px}
+.destacado h3{font-family:"Source Serif 4",Georgia,serif;font-size:22px;font-weight:700;
+              line-height:1.25;margin:0 0 12px}
+.destacado p{font-size:14px;line-height:1.65;color:#42545B;margin:0 0 18px}
+.firma{display:flex;align-items:center;gap:11px;border-top:1px solid var(--linea);padding-top:14px}
+.firma .av{width:36px;height:36px;border-radius:50%;background:#D8DEDD;flex:none;object-fit:cover}
+.firma b{display:block;font-size:13px;font-weight:600}
+.firma span{font-size:11.5px;color:var(--gris-2)}
+
+/* ---------- herramienta ---------- */
+.herram{background:var(--noche);color:#fff;border-radius:4px;padding:22px;position:relative;overflow:hidden}
+.herram .kicker{color:var(--menta);margin-bottom:14px}
+.herram h3{font-family:"Source Serif 4",Georgia,serif;font-size:21px;font-weight:700;margin:0 0 10px}
+.herram p{font-size:13.5px;line-height:1.6;color:#B9CBCF;margin:0 0 20px;max-width:30ch}
+.herram .ir{font-size:12px;font-weight:700;letter-spacing:.09em;color:var(--menta);
+            display:inline-flex;align-items:center;gap:9px}
+.herram .adorno{position:absolute;right:20px;top:50%;transform:translateY(-50%);
+                color:var(--menta);opacity:.75}
+
+/* ---------- pie ---------- */
+footer{border-top:1px solid var(--linea);padding:26px 0 60px;font-size:12px;color:var(--gris-2);line-height:1.7}
+footer a{color:var(--gris)}
+
+/* ---------- adaptable ---------- */
+@media (max-width:1180px){
+  .grilla{grid-template-columns:minmax(0,1fr) 340px}
+  .panorama h1{font-size:34px}
+}
+@media (max-width:960px){
+  .wrap{padding:0 20px}
+  .grilla{grid-template-columns:1fr;gap:22px}
+  .panorama{grid-template-columns:1fr}
+  .panorama .foto{order:-1;min-height:210px}
+  .tres,.lista{grid-template-columns:1fr}
+  .lista .fila{border-left:0;border-top:1px solid var(--linea)}
+  .lista .fila:first-child{border-top:0}
+  nav ul{gap:24px;overflow-x:auto;padding-bottom:10px}
+  .lema,.acc a span{display:none}
+}
+@media (max-width:640px){
+  .marca{font-size:30px}
+  .panorama h1{font-size:29px}
+  .panorama .texto{padding:24px}
+  .ticker ul{display:none}
+  .ticker .wrap{justify-content:space-between}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
-<div class="hoja">
-  <header>
-    <h1>Panel diario</h1>
-    <!-- INICIO FECHA -->
-    <div class="fecha">viernes, 4 de septiembre de 2026</div>
-    <!-- FIN FECHA -->
-  </header>
 
-  <!-- INICIO RESUMEN -->
-  <p class="resumen">El dólar sigue subiendo despacio y las tasas de plazo fijo no alcanzan a cubrir la inflación, mientras el consumo masivo encadena siete meses en baja. Del lado positivo, la Provincia lanzó cuotas sin interés con Bancor y amplió el beneficio de Ingresos Brutos Cero para más pymes.</p>
-  <!-- FIN RESUMEN -->
+<body>
 
-  <!-- INICIO BLOQUES -->
-  <article>
-    <h2><span class="senal amarillo"></span>El dólar sube despacio y la brecha con el blue es mínima</h2>
-    <p>El dólar oficial minorista cerró el jueves cerca de $1.535 y el mayorista en $1.511, con una suba leve en la semana. El blue cotiza casi pegado al oficial, con una brecha muy chica. El Banco Central sigue comprando reservas dentro del esquema de bandas cambiarias.</p>
-    <p class="importa">Para un comercio que repone stock importado, la suba gradual da margen para actualizar precios sin sobresaltos, por ahora.</p>
-    <p class="pie">El Cronista · <a href="https://www.cronista.com/finanzas-mercados/dolar-oficial-hoy-asi-cerro-la-cotizacion-de-este-jueves-3-de-septiembre/">leer la fuente</a></p>
-  </article>
-  <article>
-    <h2><span class="senal amarillo"></span>Las tasas de plazo fijo no le ganan a la inflación</h2>
-    <p>Los bancos ajustaron sus tasas de plazo fijo esta semana: Banco Nación paga 20% nominal anual y Banco Macro 19,5%, mientras algunas financieras no bancarias llegan a 24%. El promedio de mercado a 30 días ronda el 21%, según el BCRA.</p>
-    <p class="importa">Guardar los pesos sobrantes en un plazo fijo común hoy rinde menos que la inflación esperada para el año, así que conviene revisar otras opciones antes de dejar la caja quieta.</p>
-    <p class="pie">Diario Río Negro · <a href="https://www.rionegro.com.ar/economia/cambiaron-las-tasas-de-los-plazos-fijos-en-septiembre-2026-cuales-son-los-bancos-que-mas-pagan-hoy-4705561/">leer la fuente</a></p>
-  </article>
-  <article>
-    <h2><span class="senal rojo"></span>El público compra menos por vez pero visita más seguido el comercio</h2>
-    <p>En el segundo trimestre la gente fue más veces al comercio pero llevó menos cantidad: la frecuencia de compra subió 1,1% y el volumen cayó 3,7%. En julio el consumo masivo volvió a bajar, 2,6% contra el año pasado, y ya acumula siete meses seguidos en baja. Ganan lugar las marcas más baratas y los envases chicos, mientras híper y mayoristas pierden ventas.</p>
-    <p class="importa">Conviene tener variedad de tamaños y precios en la góndola, porque el cliente arma el changuito con lo justo y vuelve más seguido a reponer.</p>
-    <p class="pie">InfoAlimentación · <a href="https://infoalimentacion.com.ar/2026/09/03/consumo-masivo-hogares-compras-pequenas/">leer la fuente</a></p>
-  </article>
-  <article>
-    <h2><span class="senal verde"></span>Córdoba lanza cuotas sin interés y crédito para comercios</h2>
-    <p>Desde el 1° de septiembre y hasta fin de enero, la tarjeta Cordobesa ofrece hasta seis cuotas sin interés en más de 400 comercios adheridos de toda la provincia. Bancor suma además una línea de $20.000 millones para capital de trabajo, con una tasa subsidiada del 33% anual.</p>
-    <p class="importa">Sumarse pide estar inscripto en FEDECOM o en la Cámara de Comercio de Córdoba y tener al menos tres años de antigüedad en AFIP, algo para evaluar de cara a la sucursal de Carlos Paz.</p>
-    <p class="pie">Gobierno de Córdoba · <a href="https://cordobaproduce.cba.gov.ar/23191/llaryora-anuncio-6-cuotas-sin-interes-para-impulsar-el-consumo-y-20-000-millones-para-fortalecer-el-comercio/">leer la fuente</a></p>
-  </article>
-  <article>
-    <h2><span class="senal verde"></span>Amplían el beneficio de Ingresos Brutos Cero para pymes</h2>
-    <p>El gobierno provincial subió de $3.200 a $4.500 millones el techo de facturación anual para acceder a la exención de Ingresos Brutos. A cambio, la empresa tiene que invertir en bienes de uso al menos el 1,2% de lo que facturó el año anterior. La medida todavía es un proyecto de ley que falta tratar en la Legislatura.</p>
-    <p class="importa">Si la facturación de la empresa se acerca a ese nuevo techo, vale la pena mirar los requisitos: puede significar dejar de pagar Ingresos Brutos el año que viene.</p>
-    <p class="pie">El Diario del Centro del País · <a href="http://www.eldiariocba.com.ar/provinciales/2026/9/3/un-anuncio-para-las-pymes-152348.html">leer la fuente</a></p>
-  </article>
-  <!-- FIN BLOQUES -->
-
-  <footer>
-    <!-- INICIO PIE -->
-    Actualizado automáticamente.
-    <!-- FIN PIE -->
-    Los resúmenes los redacta un modelo de lenguaje a partir de las fuentes enlazadas:
-    verificá cualquier dato antes de tomar una decisión con él.
-  </footer>
+<div class="tope">
+  <div class="wrap">
+    <div class="tope-fila">
+      <a href="/" class="marca">UMBRAL<span class="punto">.</span></a>
+      <div class="lema">
+        <b>FINANZAS · EMPRESAS · ECONOMÍA REAL</b>
+        <span>Información para decidir.</span>
+      </div>
+      <div class="hueco"></div>
+      <div class="acc">
+        <a href="#newsletter"><svg width="17" height="17" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg><span>Newsletter</span></a>
+        <a href="#buscar"><svg width="17" height="17" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Buscar</span></a>
+        <a href="#suscribirse" class="suscri">SUSCRIBITE</a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/" class="aqui">INICIO</a></li>
+        <li><a href="#noticias">NOTICIAS</a></li>
+        <li><a href="#analisis">ANÁLISIS</a></li>
+        <li><a href="#datos">DATOS</a></li>
+        <li><a href="#research">RESEARCH</a></li>
+        <li><a href="#opinion">OPINIÓN</a></li>
+        <li><a href="#herramientas">HERRAMIENTAS</a></li>
+      </ul>
+    </nav>
+  </div>
 </div>
+
+<div class="ticker">
+  <div class="wrap">
+    <span class="rot"><i></i>LO ÚLTIMO</span>
+    <ul>
+      <!-- INICIO LO-ULTIMO -->
+      <li><a href="https://www.bloomberglinea.com/latinoamerica/argentina/en-cuanto-cerro-la-inflacion-de-agosto-segun-las-principales-consultoras-de-argentina/">Inflación de agosto: las consultoras la ven entre 1,5% y 1,9%</a></li>
+      <li><a href="https://www.ambito.com/informacion-general/dia-la-industria-que-se-celebra-cada-2-septiembre-y-los-numeros-2026-que-preocupan-al-sector-n6317613">Día de la Industria: la producción cae 2,2% en el semestre</a></li>
+      <li><a href="https://www.baenegocios.com/economia/licitacion-el-tesoro-consiguio-renovar-el-96-y-dejara-sueltos-500-000-m/">El Tesoro renovó el 96% de sus vencimientos de agosto</a></li>
+<!-- FIN LO-ULTIMO -->
+    </ul>
+    <span class="reloj"><!-- INICIO FECHA-HORA -->
+4 SEP 2026 | 07:08
+<!-- FIN FECHA-HORA --></span>
+  </div>
+</div>
+
+<main class="wrap grilla">
+
+  <div class="col-a">
+
+    <!-- INICIO PANORAMA -->
+    <article class="panorama">
+      <div class="texto">
+        <p class="kicker">IMPUESTOS</p>
+        <h1>Córdoba amplía Ingresos Brutos Cero a más pymes industriales</h1>
+        <p>El gobernador Llaryora elevó de $3.200 a $4.500 millones el techo de facturación para acceder a la exención de Ingresos Brutos, en el acto por el Día de la Industria. El beneficio pasa a alcanzar a una franja más ancha de pymes, aunque exige invertir en activos fijos al menos el 1,2% de la base imponible del año anterior y todavía necesita aprobación de la Legislatura provincial. Para una pyme que hoy factura cerca del límite anterior, conviene revisar si ahora entra en el régimen antes de cerrar el presupuesto fiscal 2027: es carga tributaria provincial que puede bajar a cero en vez de sumarse a costos fijos ya ajustados.</p>
+        <a class="boton" href="https://hoydia.com.ar/hoy-cordoba/llaryora-ingresos-brutos-pymes-industria/">LEER ANÁLISIS COMPLETO
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="foto"><img src="portada.jpg" alt="" onerror="this.remove()"></div>
+    </article>
+<!-- FIN PANORAMA -->
+
+    <div class="rotulo" style="margin-top:26px"><h2>LO MÁS IMPORTANTE</h2></div>
+    <div class="tres">
+      <!-- INICIO LO-IMPORTANTE -->
+      <article class="tarjeta">
+        <p class="kicker">GESTIÓN</p>
+        <div class="cuerpo">
+          <div>
+            <h3>UIA pidió parar embargos de ARCA a pymes; el Gobierno no aceptó</h3>
+            <p>En el acto central por el Día de la Industria, la Unión Industrial Argentina pidió al Gobierno una tregua de 180 días sin embargos de ARCA contra pymes con deudas impositivas. El equipo económico rechazó el pedido. Para una empresa con cuentas atrasadas la señal es clara: no hay margen de espera oficial, y regularizar antes de un embargo sigue siendo la única salida segura para no perder acceso a las cuentas bancarias.</p>
+          </div>
+        </div>
+        <p class="pie">4 SEP 2026 · 2 MIN LECTURA</p>
+      </article>
+      <article class="tarjeta">
+        <p class="kicker">ACTIVIDAD</p>
+        <div class="cuerpo">
+          <div>
+            <h3>Consumo masivo: caen los súper y ganan los comercios de barrio</h3>
+            <p>La consultora Worldpanel midió que en el segundo trimestre el volumen comprado cayó 3,7% interanual, aunque la frecuencia de compra subió 1,1%: la gente va más veces y lleva menos por vez. Hipermercados, supermercados y mayoristas perdieron entre 12% y 13% de volumen, mientras los autoservicios de cercanía crecieron casi 8%. Para un comercio minorista, el dato práctico es que el ticket promedio bajó y conviene surtir con reposición más frecuente en vez de apostar a la compra grande.</p>
+          </div>
+        </div>
+        <p class="pie">4 SEP 2026 · 3 MIN LECTURA</p>
+      </article>
+      <article class="tarjeta">
+        <p class="kicker">FINANCIAMIENTO</p>
+        <div class="cuerpo">
+          <div>
+            <h3>Las pymes duplicaron sus emisiones de deuda en el semestre</h3>
+            <p>Según datos del mercado de capitales, las colocaciones de obligaciones negociables pyme pasaron de 26 a 52 entre el primer semestre de 2025 y el de 2026, y el monto en pesos subió 81% interanual hasta $68.800 millones. La Comisión Nacional de Valores además eliminó la autorización previa para la mayoría de las emisiones de deuda, lo que agiliza el trámite. Para una pyme con buen historial, emitir deuda en el mercado empieza a competir con el crédito bancario como fuente de capital de trabajo.</p>
+          </div>
+        </div>
+        <p class="pie">4 SEP 2026 · 3 MIN LECTURA</p>
+      </article>
+<!-- FIN LO-IMPORTANTE -->
+    </div>
+
+    <div class="rotulo" style="margin-top:26px">
+      <h2>ÚLTIMOS ANÁLISIS</h2><a href="#analisis">VER TODOS →</a>
+    </div>
+    <div class="lista">
+      <!-- INICIO ULTIMOS-ANALISIS -->
+      <div class="fila">
+        <span class="hora">21:40</span>
+        <div class="cont"><span class="et">IMPUESTOS</span><h4>Cómo saber si tu pyme entra en el nuevo tope de Ingresos Brutos Cero</h4></div>
+        <svg class="marca-libro" width="13" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 3h12v18l-6-4.5L6 21Z"/></svg>
+      </div>
+      <div class="fila">
+        <span class="hora">19:55</span>
+        <div class="cont"><span class="et">GESTIÓN</span><h4>Qué hacer antes de que ARCA embargue una cuenta bancaria</h4></div>
+        <svg class="marca-libro" width="13" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 3h12v18l-6-4.5L6 21Z"/></svg>
+      </div>
+      <div class="fila">
+        <span class="hora">18:20</span>
+        <div class="cont"><span class="et">ACTIVIDAD</span><h4>Por qué el súper pierde y el almacén de barrio gana clientes</h4></div>
+        <svg class="marca-libro" width="13" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 3h12v18l-6-4.5L6 21Z"/></svg>
+      </div>
+<!-- FIN ULTIMOS-ANALISIS -->
+    </div>
+  </div>
+
+  <aside class="col-b">
+
+    <section class="radar">
+      <div class="radar-top">
+        <h2>RADAR <em>UMBRAL</em></h2>
+        <a href="#tablero">Ver tablero completo →</a>
+      </div>
+      <ul>
+        <!-- INICIO RADAR -->
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M14.5 9.5a2.5 2.5 0 0 0-5 .8c0 2.7 5 1.4 5 4a2.5 2.5 0 0 1-5 .2"/></svg></span>
+          <span class="nom">DÓLAR OFICIAL (MINORISTA, PROMEDIO VENDEDOR — BCRA)</span>
+          <span class="val">$1.529,42</span>
+          <span class="var neutro">sin dato</span>
+        </li>
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M14.5 9.5a2.5 2.5 0 0 0-5 .8c0 2.7 5 1.4 5 4a2.5 2.5 0 0 1-5 .2"/></svg></span>
+          <span class="nom">DÓLAR BLUE (VENTA)</span>
+          <span class="val">$1.545,00</span>
+          <span class="var neutro">• $0,00</span>
+        </li>
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M4 18 10 8l4 6 6-10"/><path d="M4 21h17"/></svg></span>
+          <span class="nom">BRECHA CAMBIARIA (BLUE VS. OFICIAL)</span>
+          <span class="val">1,0%</span>
+          <span class="var neutro">• 0,0 p.p.</span>
+        </li>
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3c3 4 5 6 5 9a5 5 0 0 1-10 0c0-3 2-5 5-9Z"/></svg></span>
+          <span class="nom">INFLACIÓN MENSUAL (IPC NIVEL GENERAL)</span>
+          <span class="val">2,1%</span>
+          <span class="var neutro">sin dato</span>
+        </li>
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span class="nom">TASA BADLAR (BANCOS PRIVADOS)</span>
+          <span class="val">23,1%</span>
+          <span class="var neutro">sin dato</span>
+        </li>
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <span class="nom">CHEQUES RECHAZADOS</span>
+          <span class="val">—</span>
+          <span class="var neutro">sin dato</span>
+        </li>
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M3 4h2l2.6 11h9.8l2.1-8H6"/><circle cx="10" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></span>
+          <span class="nom">VENTAS MINORISTAS (CAME)</span>
+          <span class="val">—</span>
+          <span class="var neutro">sin dato</span>
+        </li>
+        <li class="ind">
+          <span class="ico"><svg width="15" height="15" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="10" r="2.4"/><path d="M7.5 17a4.6 4.6 0 0 1 9 0"/></svg></span>
+          <span class="nom">CONFIANZA DEL CONSUMIDOR (ICC-UTDT)</span>
+          <span class="val">—</span>
+          <span class="var neutro">sin dato</span>
+        </li>
+<!-- FIN RADAR -->
+      </ul>
+      <p class="meta">
+        <!-- INICIO RADAR-META -->
+        Actualizado: 4 SEP 2026 | 07:08<br>Fuente: BCRA, Bluelytics, INDEC (vía datos.gob.ar, Subsecretaría de Programación Macroeconómica)
+<!-- FIN RADAR-META -->
+      </p>
+    </section>
+
+    <!-- INICIO ANALISIS -->
+    <section class="destacado">
+      <p class="kicker">GESTIÓN</p>
+      <h3>Menos Ingresos Brutos, más presión de ARCA: la pyme entre dos caras del Estado</h3>
+      <p>Las dos noticias fiscales de esta edición muestran caras distintas del mismo Estado. Córdoba amplía el universo de pymes industriales que pueden llegar a pagar cero Ingresos Brutos, y a la vez la Nación le dice que no a la UIA cuando pide una tregua de embargos para empresas con deudas con ARCA. Ninguna de las dos decisiones es mala en sí misma —una provincia que baja impuestos y una Nación que no relaja el cobro son coherentes con bajar el déficit—, pero para una pyme cordobesa se traduce en una tarea doble: revisar si ahora entra en el régimen de exención provincial, y al mismo tiempo blindar la relación con ARCA antes de que una deuda impositiva se convierta en un embargo de cuenta. Sumale que el consumidor sigue comprando poco y seguido: con el ticket promedio más chico, el capital de trabajo rinde menos margen por operación. La lectura para septiembre es simple: ordenar la parte impositiva mientras se puede elegir, porque cuando el Estado decide por vos —con un embargo— ya no hay margen de maniobra.</p>
+      <div class="firma">
+        <img class="av" src="autor.jpg" alt="" onerror="this.remove()">
+        <div><b>Por Fabián Vélez</b><span>Director editorial</span></div>
+      </div>
+    </section>
+<!-- FIN ANALISIS -->
+
+    <!-- INICIO HERRAMIENTA -->
+    <section class="herram">
+      <p class="kicker">HERRAMIENTA DEL DÍA</p>
+      <h3>Simulador de costo financiero</h3>
+      <p>Calculá el costo real de descontar un cheque o usar líneas de crédito según monto y plazo.</p>
+      <a class="ir" href="#simulador">IR AL SIMULADOR
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <svg class="adorno" width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="4" y="2" width="16" height="20" rx="2"/><rect x="7" y="5" width="10" height="4"/>
+        <circle cx="8.5" cy="13" r=".9"/><circle cx="12" cy="13" r=".9"/><circle cx="15.5" cy="13" r=".9"/>
+        <circle cx="8.5" cy="17" r=".9"/><circle cx="12" cy="17" r=".9"/><circle cx="15.5" cy="17" r=".9"/>
+      </svg>
+    </section>
+    <!-- FIN HERRAMIENTA -->
+
+  </aside>
+</main>
+
+<footer class="wrap">
+  <!-- INICIO PIE-FUENTES -->
+      Fuentes consultadas en esta edición: BCRA, Bluelytics, INDEC (vía datos.gob.ar, Subsecretaría de Programación Macroeconómica), Gobierno de Córdoba, Hoy Día Córdoba, Ámbito, Infoalimentación, La Nación, BAE Negocios, Bloomberg Línea
+<!-- FIN PIE-FUENTES -->
+  <br>
+  Los textos periodísticos se redactan de forma automática a partir de las fuentes enlazadas.
+  Los indicadores del Radar provienen de fuentes oficiales y conservan la fecha real del dato,
+  que puede ser anterior a la fecha de actualización del sitio. Verificá cualquier cifra antes
+  de tomar una decisión con ella.
+</footer>
+
+</body>
+</html>
