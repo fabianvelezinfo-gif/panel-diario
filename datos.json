@@ -1,0 +1,46 @@
+{
+  "fecha": "2026-09-04",
+  "resumen": "El dólar sigue subiendo despacio y las tasas de plazo fijo no alcanzan a cubrir la inflación, mientras el consumo masivo encadena siete meses en baja. Del lado positivo, la Provincia lanzó cuotas sin interés con Bancor y amplió el beneficio de Ingresos Brutos Cero para más pymes.",
+  "bloques": [
+    {
+      "titular": "El dólar sube despacio y la brecha con el blue es mínima",
+      "texto": "El dólar oficial minorista cerró el jueves cerca de $1.535 y el mayorista en $1.511, con una suba leve en la semana. El blue cotiza casi pegado al oficial, con una brecha muy chica. El Banco Central sigue comprando reservas dentro del esquema de bandas cambiarias.",
+      "importa": "Para un comercio que repone stock importado, la suba gradual da margen para actualizar precios sin sobresaltos, por ahora.",
+      "senal": "amarillo",
+      "fuente_nombre": "El Cronista",
+      "fuente_url": "https://www.cronista.com/finanzas-mercados/dolar-oficial-hoy-asi-cerro-la-cotizacion-de-este-jueves-3-de-septiembre/"
+    },
+    {
+      "titular": "Las tasas de plazo fijo no le ganan a la inflación",
+      "texto": "Los bancos ajustaron sus tasas de plazo fijo esta semana: Banco Nación paga 20% nominal anual y Banco Macro 19,5%, mientras algunas financieras no bancarias llegan a 24%. El promedio de mercado a 30 días ronda el 21%, según el BCRA.",
+      "importa": "Guardar los pesos sobrantes en un plazo fijo común hoy rinde menos que la inflación esperada para el año, así que conviene revisar otras opciones antes de dejar la caja quieta.",
+      "senal": "amarillo",
+      "fuente_nombre": "Diario Río Negro",
+      "fuente_url": "https://www.rionegro.com.ar/economia/cambiaron-las-tasas-de-los-plazos-fijos-en-septiembre-2026-cuales-son-los-bancos-que-mas-pagan-hoy-4705561/"
+    },
+    {
+      "titular": "El público compra menos por vez pero visita más seguido el comercio",
+      "texto": "En el segundo trimestre la gente fue más veces al comercio pero llevó menos cantidad: la frecuencia de compra subió 1,1% y el volumen cayó 3,7%. En julio el consumo masivo volvió a bajar, 2,6% contra el año pasado, y ya acumula siete meses seguidos en baja. Ganan lugar las marcas más baratas y los envases chicos, mientras híper y mayoristas pierden ventas.",
+      "importa": "Conviene tener variedad de tamaños y precios en la góndola, porque el cliente arma el changuito con lo justo y vuelve más seguido a reponer.",
+      "senal": "rojo",
+      "fuente_nombre": "InfoAlimentación",
+      "fuente_url": "https://infoalimentacion.com.ar/2026/09/03/consumo-masivo-hogares-compras-pequenas/"
+    },
+    {
+      "titular": "Córdoba lanza cuotas sin interés y crédito para comercios",
+      "texto": "Desde el 1° de septiembre y hasta fin de enero, la tarjeta Cordobesa ofrece hasta seis cuotas sin interés en más de 400 comercios adheridos de toda la provincia. Bancor suma además una línea de $20.000 millones para capital de trabajo, con una tasa subsidiada del 33% anual.",
+      "importa": "Sumarse pide estar inscripto en FEDECOM o en la Cámara de Comercio de Córdoba y tener al menos tres años de antigüedad en AFIP, algo para evaluar de cara a la sucursal de Carlos Paz.",
+      "senal": "verde",
+      "fuente_nombre": "Gobierno de Córdoba",
+      "fuente_url": "https://cordobaproduce.cba.gov.ar/23191/llaryora-anuncio-6-cuotas-sin-interes-para-impulsar-el-consumo-y-20-000-millones-para-fortalecer-el-comercio/"
+    },
+    {
+      "titular": "Amplían el beneficio de Ingresos Brutos Cero para pymes",
+      "texto": "El gobierno provincial subió de $3.200 a $4.500 millones el techo de facturación anual para acceder a la exención de Ingresos Brutos. A cambio, la empresa tiene que invertir en bienes de uso al menos el 1,2% de lo que facturó el año anterior. La medida todavía es un proyecto de ley que falta tratar en la Legislatura.",
+      "importa": "Si la facturación de la empresa se acerca a ese nuevo techo, vale la pena mirar los requisitos: puede significar dejar de pagar Ingresos Brutos el año que viene.",
+      "senal": "verde",
+      "fuente_nombre": "El Diario del Centro del País",
+      "fuente_url": "http://www.eldiariocba.com.ar/provinciales/2026/9/3/un-anuncio-para-las-pymes-152348.html"
+    }
+  ]
+}
