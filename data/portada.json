@@ -1,75 +1,73 @@
 {
   "lo_ultimo": [
     {
-      "titular": "Inflación de agosto: las consultoras la ven entre 1,5% y 1,9%",
-      "url": "https://www.bloomberglinea.com/latinoamerica/argentina/en-cuanto-cerro-la-inflacion-de-agosto-segun-las-principales-consultoras-de-argentina/"
+      "titular": "INDEC publica la inflación de agosto el jueves 10",
+      "url": "https://www.canal26.com/economia/2026/08/29/el-indec-difunde-la-inflacion-de-agosto-2026-que-dia-se-conoce-el-dato-y-que-numero-espera-el-gobierno/"
     },
     {
-      "titular": "Día de la Industria: la producción cae 2,2% en el semestre",
-      "url": "https://www.ambito.com/informacion-general/dia-la-industria-que-se-celebra-cada-2-septiembre-y-los-numeros-2026-que-preocupan-al-sector-n6317613"
+      "titular": "El salario mínimo sube a $383.800 este mes",
+      "url": "https://www.cronista.com/economia-politica/tras-la-falta-de-acuerdo-por-el-salario-minimo-el-gobierno-fijo-los-proximos-ocho-aumentos-a-cuanto-se-ira/"
     },
     {
-      "titular": "El Tesoro renovó el 96% de sus vencimientos de agosto",
-      "url": "https://www.baenegocios.com/economia/licitacion-el-tesoro-consiguio-renovar-el-96-y-dejara-sueltos-500-000-m/"
+      "titular": "El RIMI ya permite a las pymes recuperar IVA",
+      "url": "https://www.cronista.com/economia-politica/el-rimi-ya-esta-operativo-que-pymes-pueden-recuperar-iva-y-pagar-menos-ganancias/"
     }
   ],
   "panorama": {
-    "kicker": "IMPUESTOS",
-    "titulo": "Córdoba amplía Ingresos Brutos Cero a más pymes industriales",
-    "bajada": "El gobernador Llaryora elevó de $3.200 a $4.500 millones el techo de facturación para acceder a la exención de Ingresos Brutos, en el acto por el Día de la Industria. El beneficio pasa a alcanzar a una franja más ancha de pymes, aunque exige invertir en activos fijos al menos el 1,2% de la base imponible del año anterior y todavía necesita aprobación de la Legislatura provincial. Para una pyme que hoy factura cerca del límite anterior, conviene revisar si ahora entra en el régimen antes de cerrar el presupuesto fiscal 2027: es carga tributaria provincial que puede bajar a cero en vez de sumarse a costos fijos ya ajustados.",
-    "link": "https://hoydia.com.ar/hoy-cordoba/llaryora-ingresos-brutos-pymes-industria/"
+    "kicker": "FINANCIAMIENTO",
+    "titulo": "Bancor lanza crédito a comerciantes cordobeses al 33% TNA",
+    "bajada": "Bancor puso en marcha la línea de crédito para comerciantes del programa Córdoba Impulsa: $20.000 millones de cupo, hasta $10 millones por operación, a pagar en 36 meses. La tasa nominal anual es del 37%, pero la Provincia subsidia cuatro puntos y la deja en 33% para el comerciante. Está disponible desde el 1° de septiembre y hasta agotar el cupo. Para un comercio cordobés que necesita reponer stock o financiar capital de trabajo, es una tasa bastante más baja que el promedio de plaza, aunque el cupo es limitado y conviene averiguar en la sucursal antes de que se agote.",
+    "link": "https://economixtv.com/noticia/bancor-lanzo-cordoba-impulsa-con-creditos-por-20-000-millones-para-comerciantes-y-cuotas-sin-interes-para-familias/"
   },
   "lo_importante": [
     {
-      "kicker": "GESTIÓN",
-      "titular": "UIA pidió parar embargos de ARCA a pymes; el Gobierno no aceptó",
-      "texto": "En el acto central por el Día de la Industria, la Unión Industrial Argentina pidió al Gobierno una tregua de 180 días sin embargos de ARCA contra pymes con deudas impositivas. El equipo económico rechazó el pedido. Para una empresa con cuentas atrasadas la señal es clara: no hay margen de espera oficial, y regularizar antes de un embargo sigue siendo la única salida segura para no perder acceso a las cuentas bancarias.",
+      "kicker": "DÓLAR Y MERCADOS",
+      "titular": "El riesgo país volvió a bajar y quedó en 490 puntos",
+      "texto": "El riesgo país argentino bajó por cuarta rueda consecutiva y cerró el jueves en 490 puntos, su nivel más bajo desde mediados de agosto. El dólar mayorista se mantuvo estable en $1.508 y el Banco Central sumó compras de reservas en el mercado. Para una pyme que depende de insumos importados o mira el crédito en dólares, la señal es de calma cambiaria de corto plazo, aunque el nivel de riesgo país todavía marca que financiarse afuera sigue caro para el país y, en cadena, para las empresas.",
       "pie": "4 SEP 2026 · 2 MIN LECTURA"
     },
     {
-      "kicker": "ACTIVIDAD",
-      "titular": "Consumo masivo: caen los súper y ganan los comercios de barrio",
-      "texto": "La consultora Worldpanel midió que en el segundo trimestre el volumen comprado cayó 3,7% interanual, aunque la frecuencia de compra subió 1,1%: la gente va más veces y lleva menos por vez. Hipermercados, supermercados y mayoristas perdieron entre 12% y 13% de volumen, mientras los autoservicios de cercanía crecieron casi 8%. Para un comercio minorista, el dato práctico es que el ticket promedio bajó y conviene surtir con reposición más frecuente en vez de apostar a la compra grande.",
-      "pie": "4 SEP 2026 · 3 MIN LECTURA"
+      "kicker": "DATOS",
+      "titular": "Recaudación de agosto: sube nominal, no en términos reales",
+      "texto": "ARCA recaudó $20,5 billones en agosto, un 33,5% más que un año atrás, pero descontada la inflación el ingreso quedó igual que en agosto de 2025: segundo mes seguido sin caída real, después de siete meses de baja. El IVA, el impuesto más ligado a las ventas del día a día, cayó 6,1% real, mientras las retenciones a la exportación subieron con fuerza. Para una pyme el dato importa por lo que no dice: la mejora fiscal viene del campo y del comercio exterior, no de un repunte del consumo interno.",
+      "pie": "1 SEP 2026 · 3 MIN LECTURA"
     },
     {
-      "kicker": "FINANCIAMIENTO",
-      "titular": "Las pymes duplicaron sus emisiones de deuda en el semestre",
-      "texto": "Según datos del mercado de capitales, las colocaciones de obligaciones negociables pyme pasaron de 26 a 52 entre el primer semestre de 2025 y el de 2026, y el monto en pesos subió 81% interanual hasta $68.800 millones. La Comisión Nacional de Valores además eliminó la autorización previa para la mayoría de las emisiones de deuda, lo que agiliza el trámite. Para una pyme con buen historial, emitir deuda en el mercado empieza a competir con el crédito bancario como fuente de capital de trabajo.",
-      "pie": "4 SEP 2026 · 3 MIN LECTURA"
+      "kicker": "GESTIÓN",
+      "titular": "La UOM cerró un aumento obligatorio del 6% para el sector",
+      "texto": "El Gobierno homologó el acuerdo salarial de la Unión Obrera Metalúrgica: 6% no remunerativo para agosto, septiembre y octubre, y otro tramo del 6% para noviembre y diciembre. La suba es de cumplimiento obligatorio para toda la actividad metalúrgica, no solo para las cámaras que la firmaron. Para una pyme del sector, el aumento ya está firme y hay que sumarlo al costo laboral de estos meses, sea o no parte de la negociación.",
+      "pie": "2 SEP 2026 · 2 MIN LECTURA"
     }
   ],
   "analisis": {
     "kicker": "GESTIÓN",
-    "titulo": "Menos Ingresos Brutos, más presión de ARCA: la pyme entre dos caras del Estado",
-    "texto": "Las dos noticias fiscales de esta edición muestran caras distintas del mismo Estado. Córdoba amplía el universo de pymes industriales que pueden llegar a pagar cero Ingresos Brutos, y a la vez la Nación le dice que no a la UIA cuando pide una tregua de embargos para empresas con deudas con ARCA. Ninguna de las dos decisiones es mala en sí misma —una provincia que baja impuestos y una Nación que no relaja el cobro son coherentes con bajar el déficit—, pero para una pyme cordobesa se traduce en una tarea doble: revisar si ahora entra en el régimen de exención provincial, y al mismo tiempo blindar la relación con ARCA antes de que una deuda impositiva se convierta en un embargo de cuenta. Sumale que el consumidor sigue comprando poco y seguido: con el ticket promedio más chico, el capital de trabajo rinde menos margen por operación. La lectura para septiembre es simple: ordenar la parte impositiva mientras se puede elegir, porque cuando el Estado decide por vos —con un embargo— ya no hay margen de maniobra.",
+    "titulo": "Crédito más barato, costos que no aflojan: la cuenta de septiembre para la pyme cordobesa",
+    "texto": "Esta edición junta dos señales que van en direcciones opuestas. Por un lado, el financiamiento se abarata: Bancor sale con una línea al 33% para comerciantes y el riesgo país sigue bajando, una muestra de que endeudarse -para el país y, con el tiempo, para las empresas- cuesta cada vez menos. Por el otro, los costos no dan tregua: la UOM ya tiene un aumento del 6% que corre para todo el sector metalúrgico lo haya firmado o no cada empresa, y la recaudación de agosto muestra que el Estado sigue cobrando fuerte aunque el consumo interno no repunta. La lectura práctica para una pyme cordobesa es usar el crédito más barato para lo que rinde -financiar capital de trabajo, reponer stock- y no para tapar un aumento de costos que ya está firmado en otro lado. La plata que entra más barata sirve si se destina a producir o vender más, no a sostener una estructura que de todos modos va a tener que ajustarse.",
     "autor": "Fabián Vélez",
     "cargo": "Director editorial"
   },
   "ultimos_analisis": [
     {
-      "hora": "21:40",
-      "etiqueta": "IMPUESTOS",
-      "titular": "Cómo saber si tu pyme entra en el nuevo tope de Ingresos Brutos Cero"
+      "hora": "20:15",
+      "etiqueta": "FINANCIAMIENTO",
+      "titular": "Cómo pedir el crédito de Bancor al 33% para comerciantes"
     },
     {
-      "hora": "19:55",
+      "hora": "18:40",
       "etiqueta": "GESTIÓN",
-      "titular": "Qué hacer antes de que ARCA embargue una cuenta bancaria"
+      "titular": "Qué pymes metalúrgicas ya deben pagar el aumento de la UOM"
     },
     {
-      "hora": "18:20",
-      "etiqueta": "ACTIVIDAD",
-      "titular": "Por qué el súper pierde y el almacén de barrio gana clientes"
+      "hora": "16:05",
+      "etiqueta": "DATOS",
+      "titular": "Por qué la recaudación sube en pesos pero no en poder de compra"
     }
   ],
   "fuentes": [
-    { "nombre": "Gobierno de Córdoba" },
-    { "nombre": "Hoy Día Córdoba" },
+    { "nombre": "Economix" },
+    { "nombre": "Infobae" },
     { "nombre": "Ámbito" },
-    { "nombre": "Infoalimentación" },
-    { "nombre": "La Nación" },
-    { "nombre": "BAE Negocios" },
-    { "nombre": "Bloomberg Línea" }
+    { "nombre": "El Cronista" },
+    { "nombre": "Canal 26" }
   ]
 }
